@@ -1,34 +1,35 @@
-.pricing {
+.product {
   height: calc(100vh - 5rem);
   margin: 2.5rem;
   background-color: var(--color-dark-1);
   padding: 2.5rem 5rem;
 }
 
-.pricing section {
+.product section {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 65%;
-  gap: 5rem;
-  margin: 6rem auto;
+  gap: 6rem;
+  margin: 5rem auto;
 }
 
-.pricing div {
+.product div {
   width: 50%;
+  text-align: left;
 }
 
-.pricing h2 {
+.product .img {
+  width: 45%;
+}
+
+.product h2 {
   font-size: 4rem;
-  line-height: 1.2;
   margin-bottom: 3rem;
 }
 
-.pricing p {
+.product p {
   font-size: 1.6rem;
-  margin-bottom: 2rem;
-}
-
-.pricing .img {
-  width: 45%;
+  margin: 2rem;
+  margin: 0;
 }

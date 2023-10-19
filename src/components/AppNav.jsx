@@ -9,7 +9,7 @@ export default function AppNav() {
                     <NavLink to="cities">Cities</NavLink>
                 </li>
                 <li>
-                    <NavLink to="Countries">Countries</NavLink>
+                    <NavLink to="countries">Countries</NavLink>
                 </li>
             </ul>
         </nav>

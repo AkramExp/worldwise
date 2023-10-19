@@ -21,13 +21,13 @@ export default function CountryList() {
         fetchCities();
     }, [])
 
-    const countires = cities.reduce((arr, city) => {
+    const countries = cities.reduce((arr, city) => {
         if (!arr.map(el => el.country).includes(city.country))
             return [...arr, { country: city.country, emoji: city.emoji }];
         else return arr;
-    })
+    }, [])
 
     return (
-        <ul className={styles.countryList}>{countires.map(country => <CountryItem country={country} />)}</ul>
+        <ul className={styles.countryList}>{countries.map(country => <CountryItem country={country} />)}</ul>
     )
 }

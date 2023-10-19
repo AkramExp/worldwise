@@ -65,3 +65,7 @@ input:focus {
   padding: 1rem 3rem;
   border-radius: 5px;
 }
+
+.logo {
+  height: 5.2rem;
+}

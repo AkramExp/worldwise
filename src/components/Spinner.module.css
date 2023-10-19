@@ -1,0 +1,26 @@
+.spinnerContainer {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes all {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--color-light-2);
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    animation: all 1.2s linear infinite;
+}

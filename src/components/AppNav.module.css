@@ -1,0 +1,26 @@
+.appNav {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.appNav ul {
+    background-color: var(--color-dark-2);
+    display: flex;
+    list-style: none;
+    border-radius: 7px;
+}
+
+.appNav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: inherit;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+}
+
+.appNav a:global(.active) {
+    background-color: var(--color-dark-0);
+}

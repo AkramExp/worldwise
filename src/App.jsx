@@ -4,6 +4,7 @@ import Pricing from "./pages/Pricing";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import AppLayout from "./pages/AppLayout";
+import CityList from "./components/CityList";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="login" element={<Login />} />
-        <Route path="app" element={<AppLayout />} />
+        <Route path="app" element={<AppLayout />}>
+          <Route path="cities" element={<CityList />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

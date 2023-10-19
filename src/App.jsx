@@ -16,6 +16,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="app" element={<AppLayout />}>
           <Route path="cities" element={<CityList />} />
+          <Route path="countries" element={<CountryList />} />
         </Route>
       </Routes>
     </BrowserRouter>

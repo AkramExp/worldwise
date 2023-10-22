@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./Map.module.css";
+import { useCities } from "../contexts/CitiesContext";
 import {
     MapContainer,
     TileLayer,
@@ -9,6 +10,9 @@ import {
 } from "react-leaflet";
 
 export default function Map() {
+
+    const { cities } = useCities();
+
     const position = [0, 40];
 
     return (
@@ -18,11 +22,14 @@ export default function Map() {
                     attribution='&copy; <a href="https://www.openstreetmap.fr/hot/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Marker position={position}>
-                    <Popup>
-                        A pretty CSS3 popup. <br /> Easily customizable.
-                    </Popup>
-                </Marker>
+                {
+                    cities.map(city =>
+                        <Marker position={city.position}>
+                            <Popup>
+                                {city.cityName}
+                            </Popup>
+                        </Marker>)
+                }
                 <DetectClick />
             </MapContainer>
         </div>

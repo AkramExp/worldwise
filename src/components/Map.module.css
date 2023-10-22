@@ -1,6 +1,6 @@
 .mapContainer {
     height: 100%;
-    width: 100%;
+    width: 62%;
     background-color: var(--color-dark--2);
     position: relative;
 }

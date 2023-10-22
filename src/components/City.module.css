@@ -1,0 +1,42 @@
+.city::-webkit-scrollbar {
+    display: none;
+}
+
+.city {
+    background-color: var(--color-dark-2);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    width: 100%;
+    height: 60%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.city h6 {
+    color: var(--color-light-1);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.city h3 {
+    font-size: 3.2rem;
+}
+
+.city p {
+    font-size: 1.6rem;
+}
+
+.city a:link,
+.city a:visited {
+    font-size: 1.6rem;
+    color: var(--color-brand-1);
+}

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import styles from "./CountryList.module.css"
 import CountryItem from "./CountryItem";
 import Spinner from "./Spinner";

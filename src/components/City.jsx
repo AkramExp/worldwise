@@ -1,11 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useCities } from "../contexts/CitiesContext";
 import styles from "./City.module.css";
-import { useParams } from "react-router-dom";
 import Spinner from "./Spinner";
+import { useParams } from "react-router-dom";
+import BackButton from "./BackButton";
 
 export default function City() {
-    const { id } = useParams();
 
+    const { id } = useParams();
     const formatDate = (date) =>
         new Intl.DateTimeFormat("en", {
             day: "numeric",
@@ -14,30 +16,13 @@ export default function City() {
             weekday: "long",
         }).format(new Date(date));
 
-    const BASE_URL = "http://localhost:8001/cities";
-    const [currentCity, setCurrentCity] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-
-    useEffect(function () {
-        async function getCurrentCity() {
-            try {
-                setIsLoading(true);
-                const res = await fetch(`${BASE_URL}/${id}`);
-                const data = await res.json();
-                setCurrentCity(data);
-            } catch (err) {
-                console.log(err.message);
-            } finally {
-                setIsLoading(false);
-            }
-        }
-
-        getCurrentCity();
-    }, [id])
-
+    const { currentCity, getCity, isLoading } = useCities();
 
     const { cityName, date, notes } = currentCity;
 
+    useEffect(function () {
+        getCity(id);
+    }, [id]);
 
     if (isLoading) return <Spinner />
     return (
@@ -59,6 +44,9 @@ export default function City() {
             <div className={styles.row}>
                 <h6>Learn More</h6>
                 <a href={`https://en.wikipedia.org/wiki/${cityName}`}>Check out {cityName} on Wikipidea </a>
+            </div>
+            <div>
+                <BackButton />
             </div>
         </div>
     )

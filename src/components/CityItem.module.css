@@ -14,6 +14,10 @@
     text-decoration: none;
 }
 
+.cityItem-active {
+    border: 2px solid var(--color-brand-2);
+}
+
 .emoji {
     font-size: 2.6rem;
     line-height: 1;

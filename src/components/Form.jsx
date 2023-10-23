@@ -40,7 +40,7 @@ export default function Form() {
         }
 
         createCity(newCity);
-        navigate(-1);
+        navigate('/app/cities');
     }
 
     useEffect(function () {

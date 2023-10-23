@@ -1,0 +1,7 @@
+.message {
+    margin-top: 3rem;
+    width: 70%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--color-brand-1);
+}

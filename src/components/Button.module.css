@@ -19,3 +19,16 @@
     background: none;
     border: 1px solid currentColor;
 }
+
+.position {
+    position: absolute;
+    z-index: 1000;
+    color: var(--color-dark-1);
+    background-color: var(--color-brand-2);
+    font-weight: 700;
+    font-size: 1.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    box-shadow: 0 0.4rem 1.2rem rgba(36, 42, 46, 0.16);
+}

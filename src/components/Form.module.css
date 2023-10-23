@@ -13,3 +13,19 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
+.button {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-loading {
+    opacity: 0.3;
+}
+
+.form-loading button {
+    pointer-events: none;
+    background-color: var(--color-light-1);
+    border: 1px solid var(--color-light-1);
+    color: var(--color-dark-0);
+}

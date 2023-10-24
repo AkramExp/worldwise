@@ -6,7 +6,7 @@ export default function Sidebar() {
     return (
         <div className={styles.sidebar}>
             <NavLink to="/">
-                <img src="../../public/logo.png" alt="logo" className="logo" />
+                <img src="./logo.png" alt="logo" className="logo" />
             </NavLink>
             <AppNav />
             <Outlet />

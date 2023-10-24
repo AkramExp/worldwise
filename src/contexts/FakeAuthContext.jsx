@@ -8,7 +8,7 @@ const initialState = {
 }
 
 function reducer(state, action) {
-    switch (action.payload) {
+    switch (action.type) {
         case 'login':
             return { ...state, user: action.payload, isAuthenticated: true }
         case 'logout':
@@ -25,7 +25,7 @@ const FAKE_USER = {
     avatar: 'https://i.pravatar.cc/100?u=zz'
 }
 
-function AuthProvider() {
+function AuthProvider({ children }) {
     const [{ user, isAuthenticated }, dispatch] = useReducer(reducer, initialState);
 
     function login(email, password) {
@@ -37,7 +37,9 @@ function AuthProvider() {
         dispatch({ type: 'logout' })
     }
 
-    return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}></AuthContext.Provider>
+    return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+        {children}
+    </AuthContext.Provider>
 }
 
 function useAuth() {

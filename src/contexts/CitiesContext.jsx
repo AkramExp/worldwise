@@ -18,9 +18,9 @@ function reducer(state, action) {
         case "city/loaded":
             return { ...state, isLoading: false, currentCity: action.payload }
         case 'cities/created':
-            return { ...state, isLoading: false, cities: [...state.cities, action.payload] }
+            return { ...state, isLoading: false, currentCity: action.payload, cities: [...state.cities, action.payload] }
         case 'cities/deleted':
-            return { ...state, isLoading: false, cities: state.cities.filter(city => city.id !== action.payload) }
+            return { ...state, isLoading: false, currentCity: {}, cities: state.cities.filter(city => city.id !== action.payload) }
         case 'rejected':
             return { ...state, isLoading: false, error: action.payload }
         default:

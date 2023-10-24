@@ -27,11 +27,6 @@ Install all the dependencies.
 ```bash
   npm i
 ```
-Run the fake json server.
-
-```bash
-  npm run server
-```
 
 Run the application server.
 

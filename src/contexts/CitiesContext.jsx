@@ -29,7 +29,7 @@ function reducer(state, action) {
 }
 
 function CitiesProvider({ children }) {
-    const BASE_URL = "http://localhost:8001";
+    const BASE_URL = "https://6537de1aa543859d1bb0f7ad.mockapi.io";
     const [{ cities, isLoading, currentCity }, dispatch] = useReducer(reducer, initialState);
 
 

@@ -1,4 +1,6 @@
 .message {
+    display: flex;
+    justify-content: center;
     margin-top: 3rem;
     width: 70%;
     font-size: 1.7rem;

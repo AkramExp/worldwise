@@ -33,9 +33,9 @@ export default function Form() {
         const newCity = {
             cityName,
             country,
-            emoji,
             date,
             notes,
+            emoji,
             position: { lat, lng },
         }
 
@@ -55,7 +55,7 @@ export default function Form() {
                 if (!data.countryCode) throw new Error("That doesn't seems to be a country, try somewhere else.");
 
                 setCityName(data.city || data.locality || "")
-                setCountry(data.country);
+                setCountry(data.countryName);
             } catch (err) {
                 setGeocodingError(err.message);
             } finally {

@@ -7,8 +7,8 @@ import { useNavigate } from "react-router-dom";
 
 function Login() {
     const { login, isAuthenticated } = useAuth();
-    const [email, setEmail] = useState('jack@example.com');
-    const [password, setPassword] = useState('qwerty');
+    const [email, setEmail] = useState('user@example.com');
+    const [password, setPassword] = useState('password');
     const navigate = useNavigate();
 
     function handleSubmit(e) {

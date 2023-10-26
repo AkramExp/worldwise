@@ -26,3 +26,17 @@
     flex-direction: column;
     gap: 0.5rem;
 }
+
+
+@media only screen and (max-width: 414px) {
+    .login {
+        height: 100vh;
+        margin: 0;
+        padding: 2rem 2rem;
+        /* position: absolute; */
+    }
+
+    .form {
+        width: 80%;
+    }
+}

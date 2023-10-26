@@ -31,3 +31,14 @@ a.ctaLink:visited {
   padding: 0.8rem 2rem;
   border-radius: 7px;
 }
+
+@media only screen and (max-width: 414px) {
+  .nav .pricing {
+    display: none;
+  }
+
+  a.ctaLink:link,
+  a.ctaLink:visited {
+    padding: 0.7rem 1.4rem;
+  }
+}

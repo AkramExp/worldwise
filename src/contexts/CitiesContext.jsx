@@ -6,7 +6,8 @@ const initialState = {
     cities: [],
     isLoading: false,
     currentCity: {},
-    error: ''
+    error: '',
+    isClicked: false,
 }
 
 function reducer(state, action) {
@@ -23,6 +24,8 @@ function reducer(state, action) {
             return { ...state, isLoading: false, currentCity: {}, cities: state.cities.filter(city => city.id !== action.payload) }
         case 'rejected':
             return { ...state, isLoading: false, error: action.payload }
+        case 'isClicked':
+            return { ...state, isClicked: !state.isClicked }
         default:
             throw new Error('Error');
     }
@@ -30,7 +33,7 @@ function reducer(state, action) {
 
 function CitiesProvider({ children }) {
     const BASE_URL = "https://6537de1aa543859d1bb0f7ad.mockapi.io";
-    const [{ cities, isLoading, currentCity }, dispatch] = useReducer(reducer, initialState);
+    const [{ cities, isLoading, currentCity, isClicked }, dispatch] = useReducer(reducer, initialState);
 
 
     useEffect(function () {
@@ -86,7 +89,11 @@ function CitiesProvider({ children }) {
         }
     }
 
-    return <CitiesContext.Provider value={{ cities, isLoading, currentCity, getCity, createCity, deleteCity }}>
+    function clicked() {
+        dispatch({ type: 'isClicked' })
+    }
+
+    return <CitiesContext.Provider value={{ isClicked, cities, isLoading, currentCity, clicked, getCity, createCity, deleteCity }}>
         {children}
     </CitiesContext.Provider>
 }

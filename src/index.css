@@ -69,3 +69,30 @@ input:focus {
 .logo {
   height: 5.2rem;
 }
+
+a.leaflet-control-zoom-out {
+  display: none;
+}
+
+a.leaflet-control-zoom-in {
+  display: none;
+}
+
+div.leaflet-control-attribution.leaflet-control {
+  display: none;
+}
+
+@media only screen and (max-width: 414px) {
+
+  .logo {
+    height: 4rem;
+  }
+
+  .cta:link,
+  .cta:visited {
+    /* display: inline-block; */
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.7rem 1.4rem;
+  }
+}

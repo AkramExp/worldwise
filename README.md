@@ -1,5 +1,8 @@
-
 # WorldWise
+
+## Live Site
+
+https://worldwise-akramexp.onrender.com/
 
 ## Description
 
@@ -10,13 +13,10 @@
 - By clicking on a map somewhere you can add a city via form which will be auto filled from coordinates of the place you have clicked on.
 - There is only one fake user for login authentication because it doesn't have any database attached to it, you can change the credentials present in **FakeAuthContext.jsx** file.
 
-
-
-
 ## Tech Stack
 
-- **React** 
-- **HTML** 
+- **React**
+- **HTML**
 - **CSS**
 - **Javascript**
 
@@ -33,6 +33,7 @@ Run the application server.
 ```bash
   npm run dev
 ```
+
 ## Screenshots
 
 ![ss1](https://github.com/AkramExp/worldwise/blob/main/screenshots/ss1.png)
